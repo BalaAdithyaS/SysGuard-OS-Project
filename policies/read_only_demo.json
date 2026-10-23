@@ -1,0 +1,47 @@
+{
+  "name": "Read-Only Demonstration",
+  "description": "Permits reading and auditing, but denies destructive filesystem modifications (unlink, unlinkat, rmdir, rename, renameat).",
+  "default_action": "allow",
+  "rules": [
+    {
+      "syscall": "openat",
+      "action": "audit"
+    },
+    {
+      "syscall": "open",
+      "action": "audit"
+    },
+    {
+      "syscall": "read",
+      "action": "allow"
+    },
+    {
+      "syscall": "write",
+      "action": "allow"
+    },
+    {
+      "syscall": "unlink",
+      "action": "deny"
+    },
+    {
+      "syscall": "unlinkat",
+      "action": "deny"
+    },
+    {
+      "syscall": "rmdir",
+      "action": "deny"
+    },
+    {
+      "syscall": "rename",
+      "action": "deny"
+    },
+    {
+      "syscall": "renameat",
+      "action": "deny"
+    },
+    {
+      "syscall": "kill",
+      "action": "deny"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C build artifacts
+*.o
+backend/sysguard-tracer
+examples/basic_read
+examples/denied_unlink
+examples/allowed_operation
+examples/audit_only
+examples/signal_test
+examples/security_violator
+
+# Test and coverage artifacts
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Environments
+.venv/
+env/
+venv/
+ENV/
+
+# Temporary and log files
+*.log
+*.tmp
+/tmp/sysguard_*
+.DS_Store
+Thumbs.db

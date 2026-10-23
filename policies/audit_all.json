@@ -1,0 +1,35 @@
+{
+  "name": "Audit All Policy",
+  "description": "Records and observes file and execution syscalls without blocking them.",
+  "default_action": "allow",
+  "rules": [
+    {
+      "syscall": "open",
+      "action": "audit"
+    },
+    {
+      "syscall": "openat",
+      "action": "audit"
+    },
+    {
+      "syscall": "unlink",
+      "action": "audit"
+    },
+    {
+      "syscall": "unlinkat",
+      "action": "audit"
+    },
+    {
+      "syscall": "execve",
+      "action": "audit"
+    },
+    {
+      "syscall": "read",
+      "action": "audit"
+    },
+    {
+      "syscall": "write",
+      "action": "audit"
+    }
+  ]
+}

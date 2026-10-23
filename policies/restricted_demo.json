@@ -1,0 +1,31 @@
+{
+  "name": "Restricted Operations Demonstration",
+  "description": "Blocks process spawning (execve/execveat), signals (kill), and file deletion (unlink/unlinkat).",
+  "default_action": "allow",
+  "rules": [
+    {
+      "syscall": "unlink",
+      "action": "deny"
+    },
+    {
+      "syscall": "unlinkat",
+      "action": "deny"
+    },
+    {
+      "syscall": "execve",
+      "action": "deny"
+    },
+    {
+      "syscall": "execveat",
+      "action": "deny"
+    },
+    {
+      "syscall": "kill",
+      "action": "deny"
+    },
+    {
+      "syscall": "openat",
+      "action": "audit"
+    }
+  ]
+}

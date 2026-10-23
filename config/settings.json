@@ -1,0 +1,10 @@
+{
+  "app_name": "SysGuard",
+  "version": "1.0.0",
+  "default_policy": "policies/read_only_demo.json",
+  "default_deny_errno": "EPERM",
+  "buffer_size": 5000,
+  "refresh_interval_ms": 250,
+  "theme": "dark",
+  "disclose_security_boundaries": true
+}

@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sysguard"
+version = "1.0.0"
+description = "Linux System Call Interception and Policy Enforcement Framework"
+authors = [{ name = "Operating Systems Laboratory Team" }]
+license = { text = "MIT" }
+requires-python = ">=3.10"
+dependencies = [
+    "streamlit>=1.40.0",
+    "plotly>=5.20.0",
+    "pandas>=2.0.0",
+    "pytest>=8.0.0"
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
